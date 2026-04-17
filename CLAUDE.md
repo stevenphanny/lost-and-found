@@ -1,4 +1,5 @@
 @AGENTS.md
+
 # CLAUDE.md
 
 This file is automatically loaded by Claude Code at the start of every session. It's the source of truth for how this codebase works. Keep it short, accurate, and current.
@@ -11,7 +12,7 @@ Full product brief lives in `docs/PRD.md`. Read it once at the start of any subs
 
 ## Stack
 
-- **Framework:** Next.js 15 (App Router, RSC, Server Actions)
+- **Framework:** Next.js 16.2.4 (App Router, RSC, Server Actions)
 - **Language:** TypeScript, strict mode
 - **Styling:** Tailwind CSS v4
 - **UI primitives:** shadcn/ui + Radix
@@ -40,20 +41,20 @@ Full product brief lives in `docs/PRD.md`. Read it once at the start of any subs
 
 ## Repo conventions
 
-- **Path aliases:** `@/*` → `src/*`
-- **Route handlers:** `src/app/api/**/route.ts`
-- **Server actions:** co-located in `src/app/**/actions.ts`
-- **Commerce adapter:** `src/lib/shop/` (see §Adapter pattern below)
-- **Sanity:** `src/sanity/` (schemas, client, queries)
-- **UI primitives:** `src/components/ui/` (shadcn-generated)
-- **App components:** `src/components/` (organised by domain: `product/`, `cart/`, `layout/`, etc.)
-- **Types:** co-locate; only put in `src/types/` if truly cross-cutting
-- **Env:** validated via `src/env.ts` using `@t3-oss/env-nextjs` — add new env vars here first
+- **Path aliases:** `@/*` → `./*` (repo root acts as the source root — there is no `src/` directory)
+- **Route handlers:** `app/api/**/route.ts`
+- **Server actions:** co-located in `app/**/actions.ts`
+- **Commerce adapter:** `lib/shop/` (see §Adapter pattern below)
+- **Sanity:** `sanity/` (schemas, client, queries)
+- **UI primitives:** `components/ui/` (shadcn-generated)
+- **App components:** `components/` (organised by domain: `product/`, `cart/`, `layout/`, etc.)
+- **Types:** co-locate; only put in `types/` if truly cross-cutting
+- **Env:** validated via `env.ts` using `@t3-oss/env-nextjs` — add new env vars here first
 
 ## Adapter pattern (commerce)
 
 ```
-src/lib/shop/
+lib/shop/
   index.ts          # exports `shop: ShopAdapter` — use this everywhere
   types.ts          # Product, Variant, Cart, etc. — our domain types, not Shopify's raw types
   mock.ts           # hardcoded mock data for dev without Shopify creds
@@ -65,9 +66,9 @@ src/lib/shop/
 ```
 
 The switch:
+
 ```ts
-export const shop: ShopAdapter =
-  process.env.SHOPIFY_STORE_DOMAIN ? shopifyAdapter : mockAdapter;
+export const shop: ShopAdapter = process.env.SHOPIFY_STORE_DOMAIN ? shopifyAdapter : mockAdapter;
 ```
 
 When adding a new data need (e.g. product reviews, wishlist), add the method to `ShopAdapter` interface, implement in both `mock.ts` and `shopify/`. Never add ad-hoc Shopify calls elsewhere.
@@ -76,7 +77,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 
 - Read `docs/PRD.md` once per fresh context before substantial work.
 - Check `docs/tickets/` for the active ticket before starting.
-- Run `pnpm lint` and `pnpm typecheck` before saying a task is done.
+- Run `npm run lint` and `npm run typecheck` before saying a task is done.
 - When adding a dependency, explain why in the commit message and flag it to the user if it's non-trivial.
 - When a decision isn't covered here or in the PRD, ask the user before picking.
 
@@ -84,7 +85,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 
 - Add a database.
 - Add an auth library.
-- Add Shopify SDK imports outside `src/lib/shop/`.
+- Add Shopify SDK imports outside `lib/shop/`.
 - Render Shop Pay UI on our pages.
 - Store customer PII in our app (we hold session tokens only).
 - Use `dangerouslySetInnerHTML` without explicit approval.
@@ -93,6 +94,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 ## Open decisions still to be made
 
 Track in `docs/decisions.md` as they come up. Currently open:
+
 - Exact display typeface (candidates: Neue Haas Grotesk Display, TWK Everett, PP Neue Montreal)
 - Whether to use `gql.tada` or `graphql-codegen` for typed GraphQL — decide in Phase 2 when we start real Shopify integration
 - Final colour token values (placeholder set in design system)

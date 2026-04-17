@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Website for Lost and Found fashion brand
+Tech stack plan:
+    - Next.js, TS, Tailwind CSS
+    - Better auth for user login 
 
-## Getting Started
+Context-7, MCP and Skills used: 
+    Documentation 
+        - Context-7 MCP: https://context7.com/skills/upstash/context7/context7-mcp
+        - Find docs (up to date docs): https://context7.com/skills/upstash/context7/find-docs
 
-First, run the development server:
+    Front-end/ Design:
+        - Tailwind System design: https://context7.com/skills/wshobson/agents/tailwind-design-system
+        - GSAP: https://context7.com/skills/martinholovsky/claude-skills-generator/gsap
+        - Front end design: https://context7.com/skills/anthropics/skills/frontend-design
+        - Web-design guidelines: https://context7.com/skills/vercel-labs/agent-skills/web-design-guidelines
+        - Web app testing: https://context7.com/skills/anthropics/skills/webapp-testing
+        - Framer (motion): https://context7.com/skills/onmax/nuxt-skills/motion
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Backend:
+        - Next.js cache-components: https://context7.com/skills/vercel/next.js/cache-components
+        - Better auth best practices: https://context7.com/skills/better-auth/skills/better-auth-best-practices 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    General:
+        - Vercel best practices: https://context7.com/skills/vercel-labs/agent-skills/vercel-react-best-practices
+       
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

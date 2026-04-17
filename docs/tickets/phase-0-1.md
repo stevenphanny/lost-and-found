@@ -6,6 +6,7 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 
 ---
 
+
 ### 0.2 Tooling
 
 - [x] Add Prettier + `prettier-plugin-tailwindcss`, commit config
@@ -49,9 +50,9 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 
 ### 0.6 Observability baseline
 
-- [ ] Install `@sentry/nextjs`. Run the wizard or manual config. Add DSN to env.
-- [ ] Install `posthog-js` + `posthog-node`. Cookieless mode (`persistence: 'memory'`). Add key to env.
-- [ ] Enable Vercel Analytics (`@vercel/analytics`) via `<Analytics />` in root layout.
+- [x] Install `@sentry/nextjs`. Run the wizard or manual config. Add DSN to env.
+- [x] Install `posthog-js` + `posthog-node`. Cookieless mode (`persistence: 'memory'`). Add key to env.
+- [x] Enable Vercel Analytics (`@vercel/analytics`) via `<Analytics />` in root layout.
 
 **Verify:** trigger a test error in dev — Sentry captures it. Navigate a few pages — PostHog event stream shows pageviews.
 

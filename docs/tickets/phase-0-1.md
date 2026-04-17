@@ -18,9 +18,9 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 
 ### 0.3 shadcn/ui baseline
 
-- [ ] `npx shadcn@latest init` — base colour slate, CSS variables enabled
-- [ ] Add these components: `button`, `input`, `label`, `sheet` (for cart drawer), `dialog`, `accordion`, `dropdown-menu`, `form`, `select`, `separator`, `sonner` (toasts)
-- [ ] Remove the default template's `page.tsx` content; leave a placeholder "Lost and Found" text
+- [x] `npx shadcn@latest init` — base colour slate, CSS variables enabled
+- [x] Add these components: `button`, `input`, `label`, `sheet` (for cart drawer), `dialog`, `accordion`, `dropdown-menu`, `form`, `select`, `separator`, `sonner` (toasts)
+- [x] Remove the default template's `page.tsx` content; leave a placeholder "Lost and Found" text
 
 **Verify:** import and render a `<Button>` somewhere to confirm wiring.
 

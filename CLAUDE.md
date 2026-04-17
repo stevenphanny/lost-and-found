@@ -11,7 +11,7 @@ Full product brief lives in `docs/PRD.md`. Read it once at the start of any subs
 
 ## Stack
 
-- **Framework:** Next.js 15 (App Router, RSC, Server Actions)
+- **Framework:** Next.js 16.2.4 (App Router, RSC, Server Actions)
 - **Language:** TypeScript, strict mode
 - **Styling:** Tailwind CSS v4
 - **UI primitives:** shadcn/ui + Radix
@@ -40,20 +40,20 @@ Full product brief lives in `docs/PRD.md`. Read it once at the start of any subs
 
 ## Repo conventions
 
-- **Path aliases:** `@/*` → `src/*`
-- **Route handlers:** `src/app/api/**/route.ts`
-- **Server actions:** co-located in `src/app/**/actions.ts`
-- **Commerce adapter:** `src/lib/shop/` (see §Adapter pattern below)
-- **Sanity:** `src/sanity/` (schemas, client, queries)
-- **UI primitives:** `src/components/ui/` (shadcn-generated)
-- **App components:** `src/components/` (organised by domain: `product/`, `cart/`, `layout/`, etc.)
-- **Types:** co-locate; only put in `src/types/` if truly cross-cutting
-- **Env:** validated via `src/env.ts` using `@t3-oss/env-nextjs` — add new env vars here first
+- **Path aliases:** `@/*` → `./*` (repo root acts as the source root — there is no `src/` directory)
+- **Route handlers:** `app/api/**/route.ts`
+- **Server actions:** co-located in `app/**/actions.ts`
+- **Commerce adapter:** `lib/shop/` (see §Adapter pattern below)
+- **Sanity:** `sanity/` (schemas, client, queries)
+- **UI primitives:** `components/ui/` (shadcn-generated)
+- **App components:** `components/` (organised by domain: `product/`, `cart/`, `layout/`, etc.)
+- **Types:** co-locate; only put in `types/` if truly cross-cutting
+- **Env:** validated via `env.ts` using `@t3-oss/env-nextjs` — add new env vars here first
 
 ## Adapter pattern (commerce)
 
 ```
-src/lib/shop/
+lib/shop/
   index.ts          # exports `shop: ShopAdapter` — use this everywhere
   types.ts          # Product, Variant, Cart, etc. — our domain types, not Shopify's raw types
   mock.ts           # hardcoded mock data for dev without Shopify creds
@@ -76,7 +76,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 
 - Read `docs/PRD.md` once per fresh context before substantial work.
 - Check `docs/tickets/` for the active ticket before starting.
-- Run `pnpm lint` and `pnpm typecheck` before saying a task is done.
+- Run `npm run lint` and `npm run typecheck` before saying a task is done.
 - When adding a dependency, explain why in the commit message and flag it to the user if it's non-trivial.
 - When a decision isn't covered here or in the PRD, ask the user before picking.
 

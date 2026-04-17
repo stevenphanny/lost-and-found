@@ -7,24 +7,24 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 ---
 ### 0.2 Tooling
 - [ ] Add Prettier + `prettier-plugin-tailwindcss`, commit config
-- [ ] Add `@t3-oss/env-nextjs` + `zod`, create `src/env.ts` with empty schema for now
+- [ ] Add `@t3-oss/env-nextjs` + `zod`, create `env.ts` with empty schema for now
 - [ ] Configure `tsconfig.json` with `"strict": true`, `"noUncheckedIndexedAccess": true`
 - [ ] Add `.nvmrc` (Node 20 LTS)
 - [ ] Add `.editorconfig`
 
-**Verify:** `pnpm format` works, `pnpm typecheck` script exists and passes.
+**Verify:** `npm run format` works, `npm run typecheck` script exists and passes.
 
 ### 0.3 shadcn/ui baseline
-- [ ] `pnpm dlx shadcn@latest init` — base colour slate, CSS variables enabled
+- [ ] `npx shadcn@latest init` — base colour slate, CSS variables enabled
 - [ ] Add these components: `button`, `input`, `label`, `sheet` (for cart drawer), `dialog`, `accordion`, `dropdown-menu`, `form`, `select`, `separator`, `sonner` (toasts)
 - [ ] Remove the default template's `page.tsx` content; leave a placeholder "Lost and Found" text
 
 **Verify:** import and render a `<Button>` somewhere to confirm wiring.
 
 ### 0.4 Commerce adapter skeleton (mock only)
-- [ ] Create `src/lib/shop/types.ts` with types: `Money`, `Image`, `Product`, `Variant`, `Collection`, `Cart`, `CartLine`
-- [ ] Create `src/lib/shop/mock.ts` with hardcoded data for 3 products: black LOST tee, white LOST tee, a placeholder hoodie. Each with S/M/L/XL variants, realistic stock levels, 2+ images (use Unsplash or placeholder URLs), prices in AUD.
-- [ ] Create `src/lib/shop/index.ts` exporting `shop: ShopAdapter` — for now always returns the mock adapter (Shopify adapter comes in Phase 2).
+- [ ] Create `lib/shop/types.ts` with types: `Money`, `Image`, `Product`, `Variant`, `Collection`, `Cart`, `CartLine`
+- [ ] Create `lib/shop/mock.ts` with hardcoded data for 3 products: black LOST tee, white LOST tee, a placeholder hoodie. Each with S/M/L/XL variants, realistic stock levels, 2+ images (use Unsplash or placeholder URLs), prices in AUD.
+- [ ] Create `lib/shop/index.ts` exporting `shop: ShopAdapter` — for now always returns the mock adapter (Shopify adapter comes in Phase 2).
 - [ ] Follow the interface defined in CLAUDE.md §"Adapter pattern".
 
 **Verify:** write a scratch page at `/app/_debug/page.tsx` that calls `shop.getProducts()` and renders JSON. Delete the scratch page when done.
@@ -33,12 +33,12 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 - [ ] Create Sanity project at sanity.io (free tier). Copy project ID + dataset name into `.env.local`.
 - [ ] Install `next-sanity`, `@sanity/vision`, `sanity`
 - [ ] Mount Studio at `/app/studio/[[...tool]]/page.tsx`
-- [ ] Define initial schemas in `src/sanity/schemas/`:
+- [ ] Define initial schemas in `sanity/schemas/`:
   - `homepage` (singleton: heroVideoUrl, heroPosterUrl, heroHeadline, campaignTitle, campaignBody, campaignImage, campaignCtaLabel, campaignCtaHref, manifestoTitle, manifestoBody)
   - `lookbook` (singleton: images array with alt text)
   - `sizeGuide` (title, rows: [size, chest, length, shoulder])
   - `legalPage` (slug, title, body as portable text) — used for privacy/terms/returns/shipping
-- [ ] Add `src/env.ts` entries: `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`
+- [ ] Add `env.ts` entries: `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`
 
 **Verify:** `/studio` loads in the browser, the schemas appear, you can create a Homepage document.
 
@@ -63,7 +63,7 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **"Does it feel like a brand" milestone.**
 
 ### 1.1 Design tokens
-- [ ] Define CSS custom properties in `src/app/globals.css`: colour tokens (background, foreground, muted, accent-red), font stacks, spacing scale (use Tailwind defaults where possible), radius values.
+- [ ] Define CSS custom properties in `app/globals.css`: colour tokens (background, foreground, muted, accent-red), font stacks, spacing scale (use Tailwind defaults where possible), radius values.
 - [ ] Pick and load two fonts via `next/font`:
   - Display: start with **Inter tight** as placeholder — swap to a paid display face (candidates in PRD §10) once chosen
   - Body: **Inter**

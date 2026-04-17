@@ -59,8 +59,8 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 ### 0.7 Vercel preview deploy
 
 - [x] Push repo to GitHub
-- [ ] Connect to Vercel, configure env vars on preview environment
-- [ ] Confirm preview URL serves the placeholder page
+- [x] Connect to Vercel, configure env vars on preview environment
+- [x] Confirm preview URL serves the placeholder page
 
 **Verify:** preview URL loads, Sentry receives errors from preview, no console errors.
 

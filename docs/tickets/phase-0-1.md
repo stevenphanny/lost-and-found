@@ -26,10 +26,10 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 
 ### 0.4 Commerce adapter skeleton (mock only)
 
-- [ ] Create `lib/shop/types.ts` with types: `Money`, `Image`, `Product`, `Variant`, `Collection`, `Cart`, `CartLine`
-- [ ] Create `lib/shop/mock.ts` with hardcoded data for 3 products: black LOST tee, white LOST tee, a placeholder hoodie. Each with S/M/L/XL variants, realistic stock levels, 2+ images (use Unsplash or placeholder URLs), prices in AUD.
-- [ ] Create `lib/shop/index.ts` exporting `shop: ShopAdapter` — for now always returns the mock adapter (Shopify adapter comes in Phase 2).
-- [ ] Follow the interface defined in CLAUDE.md §"Adapter pattern".
+- [x] Create `lib/shop/types.ts` with types: `Money`, `Image`, `Product`, `Variant`, `Collection`, `Cart`, `CartLine`
+- [x] Create `lib/shop/mock.ts` with hardcoded data for 3 products: black LOST tee, white LOST tee, a placeholder hoodie. Each with S/M/L/XL variants, realistic stock levels, 2+ images (use Unsplash or placeholder URLs), prices in AUD.
+- [x] Create `lib/shop/index.ts` exporting `shop: ShopAdapter` — for now always returns the mock adapter (Shopify adapter comes in Phase 2).
+- [x] Follow the interface defined in CLAUDE.md §"Adapter pattern".
 
 **Verify:** write a scratch page at `/app/_debug/page.tsx` that calls `shop.getProducts()` and renders JSON. Delete the scratch page when done.
 

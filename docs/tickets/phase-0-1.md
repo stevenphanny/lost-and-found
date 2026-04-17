@@ -36,14 +36,14 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 ### 0.5 Sanity project + Studio route
 
 - [ ] Create Sanity project at sanity.io (free tier). Copy project ID + dataset name into `.env.local`.
-- [ ] Install `next-sanity`, `@sanity/vision`, `sanity`
-- [ ] Mount Studio at `/app/studio/[[...tool]]/page.tsx`
-- [ ] Define initial schemas in `sanity/schemas/`:
+- [x] Install `next-sanity`, `@sanity/vision`, `sanity`
+- [x] Mount Studio at `/app/studio/[[...tool]]/page.tsx`
+- [x] Define initial schemas in `sanity/schemas/`:
   - `homepage` (singleton: heroVideoUrl, heroPosterUrl, heroHeadline, campaignTitle, campaignBody, campaignImage, campaignCtaLabel, campaignCtaHref, manifestoTitle, manifestoBody)
   - `lookbook` (singleton: images array with alt text)
   - `sizeGuide` (title, rows: [size, chest, length, shoulder])
   - `legalPage` (slug, title, body as portable text) — used for privacy/terms/returns/shipping
-- [ ] Add `env.ts` entries: `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`
+- [x] Add `env.ts` entries: `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`
 
 **Verify:** `/studio` loads in the browser, the schemas appear, you can create a Homepage document.
 

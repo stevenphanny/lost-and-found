@@ -1,4 +1,5 @@
 @AGENTS.md
+
 # CLAUDE.md
 
 This file is automatically loaded by Claude Code at the start of every session. It's the source of truth for how this codebase works. Keep it short, accurate, and current.
@@ -65,9 +66,9 @@ lib/shop/
 ```
 
 The switch:
+
 ```ts
-export const shop: ShopAdapter =
-  process.env.SHOPIFY_STORE_DOMAIN ? shopifyAdapter : mockAdapter;
+export const shop: ShopAdapter = process.env.SHOPIFY_STORE_DOMAIN ? shopifyAdapter : mockAdapter;
 ```
 
 When adding a new data need (e.g. product reviews, wishlist), add the method to `ShopAdapter` interface, implement in both `mock.ts` and `shopify/`. Never add ad-hoc Shopify calls elsewhere.
@@ -84,7 +85,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 
 - Add a database.
 - Add an auth library.
-- Add Shopify SDK imports outside `src/lib/shop/`.
+- Add Shopify SDK imports outside `lib/shop/`.
 - Render Shop Pay UI on our pages.
 - Store customer PII in our app (we hold session tokens only).
 - Use `dangerouslySetInnerHTML` without explicit approval.
@@ -93,6 +94,7 @@ When adding a new data need (e.g. product reviews, wishlist), add the method to 
 ## Open decisions still to be made
 
 Track in `docs/decisions.md` as they come up. Currently open:
+
 - Exact display typeface (candidates: Neue Haas Grotesk Display, TWK Everett, PP Neue Montreal)
 - Whether to use `gql.tada` or `graphql-codegen` for typed GraphQL — decide in Phase 2 when we start real Shopify integration
 - Final colour token values (placeholder set in design system)

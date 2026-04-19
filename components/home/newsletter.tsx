@@ -29,59 +29,50 @@ export function Newsletter() {
   };
 
   return (
-    <section className="border-t border-hairline bg-paper">
-      <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-10 md:py-28">
+    <section className="border-t border-hairline">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between md:px-10">
         <div>
-          <p className="mb-4 text-xs tracking-[0.22em] uppercase text-muted-1">
-            Newsletter
-          </p>
-          <h2 className="text-3xl tracking-[-0.02em] md:text-4xl text-balance">
-            Hear about drops first.
-          </h2>
-          <p className="mt-4 max-w-[40ch] text-sm text-muted-1 text-pretty">
-            We send less than one email a month. Drop releases, behind-the-scenes,
-            nothing else.
+          <p className="text-sm text-ink">Get early access to drops.</p>
+          <p className="mt-0.5 text-xs text-muted-2">
+            Less than one email a month.{" "}
+            <Link href="/legal/privacy" className="underline underline-offset-2">
+              Privacy policy
+            </Link>
+            .
           </p>
         </div>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col justify-end"
+          className="shrink-0"
           noValidate
         >
           <label htmlFor="newsletter-email" className="sr-only">
             Email address
           </label>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-stretch">
+          <div className="flex gap-2">
             <Input
               id="newsletter-email"
               type="email"
               autoComplete="email"
               placeholder="you@example.com"
               aria-invalid={!!form.formState.errors.email}
-              className="h-12 flex-1 border-hairline bg-transparent"
+              className="h-9 w-52 border-hairline bg-transparent text-sm"
               {...form.register("email")}
             />
             <Button
               type="submit"
-              size="lg"
-              className="h-12 px-8 text-xs tracking-[0.18em] uppercase"
+              size="sm"
+              className="h-9 px-5 text-xs tracking-[0.18em] uppercase"
               disabled={form.formState.isSubmitting}
             >
               Subscribe
             </Button>
           </div>
           {form.formState.errors.email ? (
-            <p role="alert" className="mt-2 text-xs text-brand">
+            <p role="alert" className="mt-1 text-xs text-brand">
               {form.formState.errors.email.message}
             </p>
           ) : null}
-          <p className="mt-4 text-xs text-muted-2">
-            By subscribing you agree to our{" "}
-            <Link href="/legal/privacy" className="underline underline-offset-2">
-              privacy policy
-            </Link>
-            .
-          </p>
         </form>
       </div>
     </section>

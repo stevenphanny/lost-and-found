@@ -3,19 +3,13 @@ type ManifestoProps = {
   body: string;
 };
 
-export function Manifesto({ title, body }: ManifestoProps) {
+export function Manifesto({ title }: ManifestoProps) {
   return (
     <section className="w-full bg-ink text-paper">
-      <div className="mx-auto w-full max-w-[1100px] px-6 py-20 md:px-10 md:py-32">
-        <p className="mb-6 text-xs tracking-[0.22em] uppercase text-paper/60">
-          Manifesto
-        </p>
-        <h2 className="text-3xl leading-tight tracking-[-0.02em] md:text-5xl lg:text-6xl text-balance">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-12 md:px-10 md:py-16">
+        <p className="max-w-[26ch] text-2xl leading-snug tracking-[-0.02em] text-paper/90 text-balance md:text-3xl lg:text-4xl">
           {title}
-        </h2>
-        <div className="mt-10 max-w-[58ch] whitespace-pre-line text-base leading-relaxed text-paper/80 text-pretty md:text-lg">
-          {body}
-        </div>
+        </p>
       </div>
     </section>
   );

@@ -57,6 +57,40 @@ export const homepage = defineType({
       type: "string",
     }),
     defineField({
+      name: "campaign2Title",
+      title: "Campaign 2 Title",
+      type: "string",
+    }),
+    defineField({
+      name: "campaign2Body",
+      title: "Campaign 2 Body",
+      type: "text",
+      rows: 4,
+    }),
+    defineField({
+      name: "campaign2Image",
+      title: "Campaign 2 Image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: "alt",
+          title: "Alt text",
+          type: "string",
+        }),
+      ],
+    }),
+    defineField({
+      name: "campaign2CtaLabel",
+      title: "Campaign 2 CTA Label",
+      type: "string",
+    }),
+    defineField({
+      name: "campaign2CtaHref",
+      title: "Campaign 2 CTA URL",
+      type: "string",
+    }),
+    defineField({
       name: "manifestoTitle",
       title: "Manifesto Title",
       type: "string",

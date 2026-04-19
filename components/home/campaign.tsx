@@ -9,13 +9,17 @@ type CampaignProps = {
   image: SanityImage | null;
   ctaLabel: string;
   ctaHref: string;
+  imagePosition?: "left" | "right";
 };
 
-export function Campaign({ title, body, image, ctaLabel, ctaHref }: CampaignProps) {
+export function Campaign({ title, body, image, ctaLabel, ctaHref, imagePosition = "left" }: CampaignProps) {
+  const imageCol = imagePosition === "right" ? "md:col-start-6 md:col-span-7 md:row-start-1" : "md:col-span-7";
+  const textCol = imagePosition === "right" ? "md:col-start-1 md:col-span-5 md:row-start-1" : "md:col-span-5";
+
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-      <div className="grid gap-10 md:grid-cols-12 md:gap-12 lg:gap-16">
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted-3 md:col-span-7 md:aspect-[4/5]">
+    <section className="mx-auto w-full max-w-[1440px] px-6 py-12 md:px-10 md:py-16">
+      <div className="grid gap-8 md:grid-cols-12 md:gap-10">
+        <div className={`relative aspect-[4/5] w-full overflow-hidden bg-muted-3 ${imageCol}`}>
           {image?.asset?.url ? (
             <Image
               src={image.asset.url}
@@ -30,17 +34,14 @@ export function Campaign({ title, body, image, ctaLabel, ctaHref }: CampaignProp
             <div className="absolute inset-0 bg-gradient-to-br from-muted-3 via-muted-2/40 to-muted-3" />
           )}
         </div>
-        <div className="flex flex-col justify-center md:col-span-5">
-          <p className="mb-4 text-xs tracking-[0.22em] uppercase text-muted-1">
-            Campaign
-          </p>
-          <h2 className="text-4xl tracking-[-0.02em] md:text-5xl lg:text-6xl text-balance">
+        <div className={`flex flex-col justify-center ${textCol}`}>
+          <h2 className="text-3xl tracking-[-0.02em] md:text-4xl lg:text-5xl text-balance">
             {title}
           </h2>
-          <p className="mt-6 max-w-[45ch] text-base text-muted-1 text-pretty md:text-lg">
+          <p className="mt-4 max-w-[40ch] text-sm text-muted-1 text-pretty">
             {body}
           </p>
-          <div className="mt-10">
+          <div className="mt-8">
             <Link
               href={ctaHref}
               className="group inline-flex items-center gap-3 border-b border-ink pb-1 text-xs tracking-[0.22em] uppercase transition-colors hover:text-brand hover:border-brand"

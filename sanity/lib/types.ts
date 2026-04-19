@@ -20,6 +20,11 @@ export type Homepage = {
   campaignImage: SanityImage | null;
   campaignCtaLabel: string | null;
   campaignCtaHref: string | null;
+  campaign2Title: string | null;
+  campaign2Body: string | null;
+  campaign2Image: SanityImage | null;
+  campaign2CtaLabel: string | null;
+  campaign2CtaHref: string | null;
   manifestoTitle: string | null;
   manifestoBody: string | null;
 } | null;

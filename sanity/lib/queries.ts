@@ -16,6 +16,16 @@ export const homepageQuery = groq`*[_type == "homepage"][0]{
   },
   campaignCtaLabel,
   campaignCtaHref,
+  campaign2Title,
+  campaign2Body,
+  "campaign2Image": campaign2Image{
+    ..., asset->{
+      url,
+      "metadata": metadata{ lqip, dimensions }
+    }
+  },
+  campaign2CtaLabel,
+  campaign2CtaHref,
   manifestoTitle,
   manifestoBody
 }`;

@@ -19,6 +19,11 @@ const fallback = {
     "A four-piece drop of heavyweight essentials. Cut, printed, and finished in small runs. Here until the next one.",
   campaignCtaLabel: "See the drop",
   campaignCtaHref: "/catalog",
+  campaign2Title: "Made to last longer than the season.",
+  campaign2Body:
+    "Constructed for movement, finished by hand. Each piece runs in editions of 50.",
+  campaign2CtaLabel: "Shop now",
+  campaign2CtaHref: "/catalog",
   manifestoTitle: "Small runs. Worn harder.",
   manifestoBody:
     "Every piece is made with one thing in mind — wearing it until it feels like yours.\n\nNo seasonal churn, no trend-chasing. We put out a few things, then we put out a few more.\n\nLost and Found is a name, a tag, and a reminder to slow down long enough to notice what you pick up.",
@@ -47,6 +52,14 @@ export default async function HomePage() {
         image={homepage?.campaignImage ?? null}
         ctaLabel={homepage?.campaignCtaLabel ?? fallback.campaignCtaLabel}
         ctaHref={homepage?.campaignCtaHref ?? fallback.campaignCtaHref}
+      />
+      <Campaign
+        title={homepage?.campaign2Title ?? fallback.campaign2Title}
+        body={homepage?.campaign2Body ?? fallback.campaign2Body}
+        image={homepage?.campaign2Image ?? null}
+        ctaLabel={homepage?.campaign2CtaLabel ?? fallback.campaign2CtaLabel}
+        ctaHref={homepage?.campaign2CtaHref ?? fallback.campaign2CtaHref}
+        imagePosition="right"
       />
       <FeaturedProducts />
       <Manifesto

@@ -102,11 +102,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.4 Catalog page
 
-- [ ] `/catalog` route
-- [ ] Grid: 2-col mobile, 3-col tablet, 4-col desktop
-- [ ] Product card: primary image, hover crossfade to second image (use CSS `:hover` + image stack; no JS state needed), name, price, sold-out badge if no variant `availableForSale`
-- [ ] Filter UI (don't wire filtering logic yet — render dropdowns/buttons only): category, size, sort
-- [ ] Pull products from `shop.getProducts()`
+- [x] `/catalog` route
+- [x] Grid: 2-col mobile, 3-col tablet, 4-col desktop
+- [x] Product card: primary image, hover crossfade to second image (use CSS `:hover` + image stack; no JS state needed), name, price, sold-out badge if no variant `availableForSale`
+- [x] Filter UI (don't wire filtering logic yet — render dropdowns/buttons only): category, size, sort
+- [x] Pull products from `shop.getProducts()`
 
 **Verify:** cards render, hover works on desktop, tap-target sizes correct on mobile, sold-out state visible on a variant-less mock product.
 

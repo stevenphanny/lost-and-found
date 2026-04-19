@@ -122,11 +122,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.6 Contact page
 
-- [ ] `/contact` route
-- [ ] Form: name, email, subject, message (React Hook Form + Zod)
-- [ ] Submit handler is a stub that logs to console for now (wire Resend in Phase 2 or 4)
-- [ ] Success state toggles to a thank-you panel
-- [ ] Below form: response time copy ("within 48h"), social links, ABN
+- [x] `/contact` route
+- [x] Form: name, email, subject, message (React Hook Form + Zod)
+- [x] Submit handler is a stub that logs to console for now (wire Resend in Phase 2 or 4)
+- [x] Success state toggles to a thank-you panel
+- [x] Below form: response time copy ("within 48h"), social links, ABN
 
 **Verify:** validation errors display, successful submit shows thank-you panel, no accessibility issues from axe DevTools.
 

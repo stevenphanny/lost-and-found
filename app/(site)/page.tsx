@@ -27,7 +27,18 @@ const fallback = {
   manifestoTitle: "Small runs. Worn harder.",
   manifestoBody:
     "Every piece is made with one thing in mind — wearing it until it feels like yours.\n\nNo seasonal churn, no trend-chasing. We put out a few things, then we put out a few more.\n\nLost and Found is a name, a tag, and a reminder to slow down long enough to notice what you pick up.",
-};
+  campaign1Image: {
+    asset: {
+      url: "/lost-and-found-images/conroy-back-light.png",
+    },
+  },
+  campaign2Image: {
+    asset: {
+      url: "/lost-and-found-images/angel-main.JPG",
+    },
+  },
+
+  };
 
 export default async function HomePage() {
   const [homepage, lookbook] = await Promise.all([
@@ -41,22 +52,25 @@ export default async function HomePage() {
 
   return (
     <>
+      {/* Hero Video */}
       <Hero
         videoUrl={homepage?.heroVideoUrl ?? null}
         posterUrl={homepage?.heroPosterUrl ?? null}
         headline={homepage?.heroHeadline ?? fallback.heroHeadline}
       />
+      {/* Campaign 1 Image left */}
       <Campaign
         title={homepage?.campaignTitle ?? fallback.campaignTitle}
         body={homepage?.campaignBody ?? fallback.campaignBody}
-        image={homepage?.campaignImage ?? null}
+        image={homepage?.campaignImage ?? fallback.campaign1Image}
         ctaLabel={homepage?.campaignCtaLabel ?? fallback.campaignCtaLabel}
         ctaHref={homepage?.campaignCtaHref ?? fallback.campaignCtaHref}
       />
+      {/* Campaign 2 Image right*/}
       <Campaign
         title={homepage?.campaign2Title ?? fallback.campaign2Title}
         body={homepage?.campaign2Body ?? fallback.campaign2Body}
-        image={homepage?.campaign2Image ?? null}
+        image={homepage?.campaign2Image ?? fallback.campaign2Image}
         ctaLabel={homepage?.campaign2CtaLabel ?? fallback.campaign2CtaLabel}
         ctaHref={homepage?.campaign2CtaHref ?? fallback.campaign2CtaHref}
         imagePosition="right"

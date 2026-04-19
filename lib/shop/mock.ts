@@ -40,13 +40,13 @@ const PRODUCTS: Product[] = [
     availableForSale: true,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80",
+        url: "/lost-and-found-images/black front.PNG",
         altText: "LOST Black Tee — front",
         width: 800,
         height: 1000,
       },
       {
-        url: "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=800&q=80",
+        url: "/lost-and-found-images/black back.PNG",
         altText: "LOST Black Tee — back",
         width: 800,
         height: 1000,
@@ -79,13 +79,13 @@ const PRODUCTS: Product[] = [
     availableForSale: true,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
+        url: "/lost-and-found-images/front.PNG",
         altText: "LOST White Tee — front",
         width: 800,
         height: 1000,
       },
       {
-        url: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80",
+        url: "/lost-and-found-images/back.PNG",
         altText: "LOST White Tee — back",
         width: 800,
         height: 1000,
@@ -121,7 +121,7 @@ const PRODUCTS: Product[] = [
       {
         url: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800&q=80",
         altText: "LOST Hoodie — front",
-        width: 800,
+        width: 1000,
         height: 1000,
       },
       {

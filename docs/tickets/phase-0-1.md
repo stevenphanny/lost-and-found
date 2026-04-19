@@ -36,7 +36,7 @@ When you finish a ticket: check the box, commit with the ticket ID in the messag
 
 ### 0.5 Sanity project + Studio route
 
-- [ ] Create Sanity project at sanity.io (free tier). Copy project ID + dataset name into `.env.local`.
+- [x] Create Sanity project at sanity.io (free tier). Copy project ID + dataset name into `.env.local`.
 - [x] Install `next-sanity`, `@sanity/vision`, `sanity`
 - [x] Mount Studio at `/app/studio/[[...tool]]/page.tsx`
 - [x] Define initial schemas in `sanity/schemas/`:
@@ -72,11 +72,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.1 Design tokens
 
-- [ ] Define CSS custom properties in `app/globals.css`: colour tokens (background, foreground, muted, accent-red), font stacks, spacing scale (use Tailwind defaults where possible), radius values.
-- [ ] Pick and load two fonts via `next/font`:
+- [x] Define CSS custom properties in `app/globals.css`: colour tokens (background, foreground, muted, accent-red), font stacks, spacing scale (use Tailwind defaults where possible), radius values.
+- [x] Pick and load two fonts via `next/font`:
   - Display: start with **Inter tight** as placeholder — swap to a paid display face (candidates in PRD §10) once chosen
   - Body: **Inter**
-- [ ] Document every token in `docs/design-system.md` with usage notes.
+- [x] Document every token in `docs/design-system.md` with usage notes.
 
 **Verify:** render a typography stack (h1–h6, body, small) and colour swatches at `/_debug/design`. Delete when Phase 1 done.
 

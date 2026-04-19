@@ -1,6 +1,7 @@
 "use client";
 
 import { ShoppingBag } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -56,7 +57,7 @@ export function CartDrawer() {
           </div>
           <SheetClose asChild>
             <Button asChild variant="outline">
-              <a href="/catalog">Browse catalog</a>
+              <Link href="/catalog">Browse catalog</Link>
             </Button>
           </SheetClose>
         </div>

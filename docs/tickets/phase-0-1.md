@@ -112,11 +112,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.5 Product detail page
 
-- [ ] `/catalog/[handle]` route
-- [ ] Gallery with thumbnail strip on desktop (vertical or horizontal), swipe carousel on mobile. Click primary image opens fullscreen lightbox (use `<Dialog>`).
-- [ ] Info panel: title, price, size selector (dynamic from variants), quantity stepper, Add-to-cart button (disabled / stubbed — no cart yet), accordions (description from mock product, size guide from Sanity, materials & care, shipping & returns from Sanity)
-- [ ] Primary CTA state machine (per PRD §6.3): "Dropping {date}" → "Notify me" → "Add to cart". Notify-me form doesn't submit yet; just render state.
-- [ ] Related products (bottom): pull 4 other products from mock
+- [x] `/catalog/[handle]` route
+- [x] Gallery with thumbnail strip on desktop (vertical or horizontal), swipe carousel on mobile. Click primary image opens fullscreen lightbox (use `<Dialog>`).
+- [x] Info panel: title, price, size selector (dynamic from variants), quantity stepper, Add-to-cart button (disabled / stubbed — no cart yet), accordions (description from mock product, size guide from Sanity, materials & care, shipping & returns from Sanity)
+- [x] Primary CTA state machine (per PRD §6.3): "Dropping {date}" → "Notify me" → "Add to cart". Notify-me form doesn't submit yet; just render state.
+- [x] Related products (bottom): pull 4 other products from mock
 
 **Verify:** clicking a product card navigates to PDP, gallery works on both desktop and mobile, sold-out size buttons are disabled and visually struck through, lightbox opens.
 

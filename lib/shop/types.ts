@@ -34,6 +34,14 @@ export type Product = {
     maxVariantPrice: Money;
   };
   tags: string[];
+  // Phase 2: populated from Shopify `custom.release_at` metafield.
+  // ISO 8601 UTC timestamp. Future value = "Dropping {date}" CTA state.
+  releaseAt: string | null;
+  // Phase 2: `custom.notify_me_enabled` metafield. If true, show Notify Me
+  // when all variants are sold out.
+  notifyMeEnabled: boolean;
+  // Phase 2: `custom.materials_care` metafield — plain text block.
+  materialsCare: string | null;
 };
 
 export type Collection = {

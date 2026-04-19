@@ -63,6 +63,10 @@ const PRODUCTS: Product[] = [
       maxVariantPrice: aud("89.00"),
     },
     tags: ["tee", "essentials"],
+    releaseAt: null,
+    notifyMeEnabled: true,
+    materialsCare:
+      "100% heavyweight cotton jersey, 320gsm. Wash cold, inside out. Tumble dry low. Do not bleach. Iron inside out on medium.",
   },
   {
     id: "mock-product-white-tee",
@@ -98,6 +102,11 @@ const PRODUCTS: Product[] = [
       maxVariantPrice: aud("89.00"),
     },
     tags: ["tee", "essentials"],
+    // Future drop date — PDP renders "Dropping {date}" state.
+    releaseAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+    notifyMeEnabled: true,
+    materialsCare:
+      "100% heavyweight cotton jersey, 320gsm. Wash cold, inside out. Tumble dry low.",
   },
   {
     id: "mock-product-hoodie",
@@ -133,6 +142,11 @@ const PRODUCTS: Product[] = [
       maxVariantPrice: aud("149.00"),
     },
     tags: ["hoodie", "outerwear"],
+    // All variants sold out + notify-me enabled → PDP renders Notify Me CTA.
+    releaseAt: null,
+    notifyMeEnabled: true,
+    materialsCare:
+      "80% cotton / 20% polyester brushed fleece, 380gsm. Wash cold. Tumble dry low. Do not iron print.",
   },
 ];
 

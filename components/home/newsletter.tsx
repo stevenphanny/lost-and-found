@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -76,9 +77,9 @@ export function Newsletter() {
           ) : null}
           <p className="mt-4 text-xs text-muted-2">
             By subscribing you agree to our{" "}
-            <a href="/legal/privacy" className="underline underline-offset-2">
+            <Link href="/legal/privacy" className="underline underline-offset-2">
               privacy policy
-            </a>
+            </Link>
             .
           </p>
         </form>

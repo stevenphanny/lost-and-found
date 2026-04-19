@@ -132,11 +132,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.7 Legal pages
 
-- [ ] `/legal/[slug]` dynamic route
-- [ ] Fetches `legalPage` doc by slug from Sanity
-- [ ] Renders portable text with Tailwind Typography plugin
-- [ ] Footer links: `/legal/privacy`, `/legal/terms`, `/legal/returns`, `/legal/shipping`
-- [ ] Seed each with placeholder content in Sanity Studio (real copy owner-provided later)
+- [x] `/legal/[slug]` dynamic route
+- [x] Fetches `legalPage` doc by slug from Sanity
+- [x] Renders portable text with Tailwind Typography plugin
+- [x] Footer links: `/legal/privacy`, `/legal/terms`, `/legal/returns`, `/legal/shipping`
+- [ ] Seed each with placeholder content in Sanity Studio (real copy owner-provided later) — **owner task in Studio**
 
 **Verify:** all four legal URLs render Sanity content, typography looks right.
 

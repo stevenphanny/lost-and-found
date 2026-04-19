@@ -82,11 +82,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.2 Layout shell
 
-- [ ] Root layout: html lang="en", body with font vars, `<Toaster />`, `<Analytics />`
-- [ ] Top nav: logo (link to home), links (Catalog, Contact), icons (search — disabled stub, account — links to sign-in, cart — opens drawer)
-- [ ] Footer: social links, legal nav, payment method marks (use SVG from a royalty-free set), ABN `123456789`, © year
-- [ ] Mobile: hamburger triggers `<Sheet>` with full-screen nav
-- [ ] Don't implement search yet — just the icon, disabled
+- [x] Root layout: html lang="en", body with font vars, `<Toaster />`, `<Analytics />`
+- [x] Top nav: logo (link to home), links (Catalog, Contact), icons (search — disabled stub, account — links to sign-in, cart — opens drawer)
+- [x] Footer: social links, legal nav, payment method marks (use SVG from a royalty-free set), ABN `123456789`, © year
+- [x] Mobile: hamburger triggers `<Sheet>` with full-screen nav
+- [x] Don't implement search yet — just the icon, disabled
 
 **Verify:** nav works across pages, mobile drawer opens, focus trap correct, no layout shift.
 

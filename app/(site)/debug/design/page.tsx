@@ -19,7 +19,7 @@ export default function DesignDebugPage() {
       <div className="mb-12 flex items-end justify-between">
         <h1 className="text-5xl md:text-6xl">Design system</h1>
         <p className="text-xs tracking-[0.18em] uppercase text-muted-1">
-          /_debug/design
+          /debug/design
         </p>
       </div>
 
@@ -41,7 +41,7 @@ export default function DesignDebugPage() {
           <h2 className="text-3xl md:text-4xl">H2 — Section</h2>
           <h3 className="text-xl md:text-2xl">H3 — Product name</h3>
           <p className="max-w-xl text-base text-pretty">
-            Body copy. Inter at 16px. Built with the brand's cadence in mind —
+            Body copy. Inter at 16px. Built with the brand&rsquo;s cadence in mind —
             quiet, direct, not overwritten. The spec lives in docs/design-system.md.
           </p>
           <p className="text-sm text-muted-1">Small — metadata, captions, prices-were.</p>

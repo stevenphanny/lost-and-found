@@ -109,4 +109,4 @@ Use `lucide-react`. Default size `h-4 w-4`. Icon-only buttons must carry an `ari
 
 ## Debug
 
-`app/_debug/design/page.tsx` renders the full stack (type, colours, components) for visual verification. Deleted before Phase 1 ships.
+`app/debug/design/page.tsx` renders the full stack (type, colours, components) for visual verification. Deleted before Phase 1 ships.

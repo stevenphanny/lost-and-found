@@ -92,11 +92,11 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.3 Home page
 
-- [ ] Fetch homepage document from Sanity (server component)
-- [ ] Sections per PRD §6.1: hero video (with `<video>` + poster fallback), campaign block, featured products (pull first 3 from `shop.getProducts()`), manifesto, lookbook strip, newsletter signup (form doesn't submit yet — just renders), footer
-- [ ] Implement GSAP scroll-triggered text reveal on hero headline (use `gsap/ScrollTrigger`, dynamic import to avoid SSR issues)
-- [ ] Horizontal scroll on lookbook strip (CSS scroll-snap)
-- [ ] Lazy-load below-fold images with `next/image`; hero poster uses `priority`
+- [x] Fetch homepage document from Sanity (server component)
+- [x] Sections per PRD §6.1: hero video (with `<video>` + poster fallback), campaign block, featured products (pull first 3 from `shop.getProducts()`), manifesto, lookbook strip, newsletter signup (form doesn't submit yet — just renders), footer
+- [x] Implement GSAP scroll-triggered text reveal on hero headline (use `gsap/ScrollTrigger`, dynamic import to avoid SSR issues)
+- [x] Horizontal scroll on lookbook strip (CSS scroll-snap)
+- [x] Lazy-load below-fold images with `next/image`; hero poster uses `priority`
 
 **Verify:** Lighthouse Performance > 85 on preview (will tune later in Phase 5). No CLS on hero. Video loads on fast connections, poster shown on slow.
 

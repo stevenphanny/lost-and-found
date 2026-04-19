@@ -142,8 +142,8 @@ Goal: site looks and feels like the brand. No cart, no auth, no checkout yet. **
 
 ### 1.8 404 and error states
 
-- [ ] Custom `not-found.tsx` at app root — on-brand, link back to home
-- [ ] Custom `error.tsx` — on-brand, "something went wrong", retry button
+- [x] Custom `not-found.tsx` at app root — on-brand, link back to home
+- [x] Custom `error.tsx` — on-brand, "something went wrong", retry button
 
 **Verify:** navigate to a bad URL → 404 shows. Throw an error in a page → error page shows (in production build).
 

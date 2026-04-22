@@ -38,7 +38,7 @@ export function ProductCard({
             alt={primary.altText ?? product.title}
             width={primary.width ?? 800}
             height={primary.height ?? 1000}
-            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+            sizes="(min-width: 640px) 50vw, 100vw"
             priority={priority}
             className="h-full w-full object-contain transition-opacity duration-500 ease-[var(--ease-brand)] group-hover:opacity-0"
           />
@@ -49,7 +49,7 @@ export function ProductCard({
             alt={secondary.altText ?? `${product.title} alternate view`}
             width={secondary.width ?? 800}
             height={secondary.height ?? 1000}
-            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+            sizes="(min-width: 640px) 50vw, 100vw"
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500 ease-[var(--ease-brand)] group-hover:opacity-100"
           />

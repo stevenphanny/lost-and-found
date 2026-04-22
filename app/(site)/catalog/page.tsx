@@ -35,7 +35,7 @@ export default async function CatalogPage() {
           <p className="text-sm text-muted-1">No products yet — check back soon.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
           {products.map((product, i) => (
             <ProductCard key={product.id} product={product} priority={i < 2} />
           ))}

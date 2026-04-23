@@ -31,7 +31,7 @@ export function ProductCard({
       className="group block"
       aria-label={`${product.title} — ${price}`}
     >
-      <div className="relative aspect-[5/6] w-full overflow-hidden bg-muted-3">
+      <div className="relative aspect-[5/6] w-full overflow-hidden">
         {primary ? (
           <Image
             src={primary.url}

@@ -46,7 +46,7 @@ export function ProductGallery({
               width={img.width ?? 200}
               height={img.height ?? 250}
               sizes="80px"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </button>
         ))}
@@ -68,7 +68,7 @@ export function ProductGallery({
                   fill
                   sizes="100vw"
                   priority={i === 0}
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             ))}
@@ -90,7 +90,7 @@ export function ProductGallery({
             <button
               type="button"
               aria-label={`Open ${title} in fullscreen`}
-              className="group relative hidden aspect-[4/5] w-full overflow-hidden bg-muted-3 md:block"
+              className="group relative hidden aspect-[4/5] w-full overflow-hidden md:block"
             >
               <Image
                 src={current.url}
@@ -99,7 +99,7 @@ export function ProductGallery({
                 height={current.height ?? 1000}
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
               <span className="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center bg-paper/80 text-ink opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
                 <Expand className="h-4 w-4" strokeWidth={1.5} />

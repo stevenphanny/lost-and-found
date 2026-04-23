@@ -32,7 +32,7 @@ const PRODUCTS: Product[] = [
   {
     id: "mock-product-black-tee",
     handle: "lost-black-tee",
-    title: "LOST Tee — Black",
+    title: "Black Cropped T-Shirt",
     description:
       "Heavy-weight 320gsm cotton jersey. Screen-printed LOST logo on chest. Dropped shoulders, boxy fit. Preshrunk.",
     descriptionHtml:
@@ -41,13 +41,13 @@ const PRODUCTS: Product[] = [
     images: [
       {
         url: "/lost-and-found-images/black front.PNG",
-        altText: "LOST Black Tee — front",
+        altText: "Black Cropped T-Shirt — front",
         width: 800,
         height: 1000,
       },
       {
         url: "/lost-and-found-images/black back.PNG",
-        altText: "LOST Black Tee — back",
+        altText: "Black Cropped T-Shirt — back",
         width: 800,
         height: 1000,
       },
@@ -71,7 +71,7 @@ const PRODUCTS: Product[] = [
   {
     id: "mock-product-white-tee",
     handle: "lost-white-tee",
-    title: "LOST Tee — White",
+    title: "White Cropped T-Shirt",
     description:
       "Heavy-weight 320gsm cotton jersey. Screen-printed LOST logo on chest. Dropped shoulders, boxy fit. Preshrunk.",
     descriptionHtml:
@@ -80,7 +80,7 @@ const PRODUCTS: Product[] = [
     images: [
       {
         url: "/lost-and-found-images/front.PNG",
-        altText: "LOST White Tee — front",
+        altText: "White Cropped T-Shirt — front",
         width: 800,
         height: 1000,
       },

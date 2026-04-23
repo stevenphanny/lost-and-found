@@ -1,4 +1,5 @@
 import { User } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { CartDrawer } from "@/components/cart/cart-drawer";
@@ -18,9 +19,14 @@ export function SiteHeader() {
         {/* Left — brand + nav (desktop) / hamburger (mobile) */}
         <div className="flex items-center gap-6">
           <MobileNav />
-          <span className="hidden font-display text-lg font-bold leading-none tracking-[-0.02em] uppercase md:block">
-            Lost<span className="text-brand">.</span>Found
-          </span>
+          <Image
+            src="/lost-and-found-images/logo2.png"
+            alt="Lost and Found"
+            width={120}
+            height={40}
+            className="hidden h-8 w-auto invert md:block"
+            priority
+          />
           <nav
             aria-label="Primary"
             className="hidden items-center gap-8 md:flex"
